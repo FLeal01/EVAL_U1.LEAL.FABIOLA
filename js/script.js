@@ -100,34 +100,6 @@ mensaje.addEventListener("input", () => {
     validarFormulario();
 });
 
-/* VALIDACIÓN AL ENVIAR EL FORMULARIO*/
-
-form.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    let valido = true;
-
-    if (!validarNombre()) valido = false;
-    if (!validarApellido()) valido = false;
-    if (!validarCorreo()) valido = false;
-    if (!validarServicio()) valido = false;
-    if (!validarMensaje()) valido = false;
-
-    if (!valido) return;
-
-    btnEnviar.disabled = true;
-
-    console.log("Nombre:", nombre.value);
-    console.log("Apellido:", apellido.value);
-    console.log("Correo:", correo.value);
-    console.log("Servicio:", servicio.value);
-    console.log("Mensaje:", mensaje.value);
-
-    form.reset();
-
-    validarFormulario();
-});
-
 /* VALIDACIÓN */
 
 function validarNombre() {
@@ -198,3 +170,56 @@ function clearError(input, errorId) {
     document.getElementById(errorId).textContent = "";
     input.classList.remove("input-error");
 }
+/* MENSAJE DE CONFIRMACIÓN FORMULARIO*/
+const toast = document.getElementById("toast");
+console.log("toast:", toast);
+function mostrarToast() {
+    if (!toast) {
+        console.error("Toast no encontrado en el DOM");
+        return;
+    }
+
+    toast.classList.remove("oculto");
+    
+    setTimeout(() => {
+        toast.classList.add("show");
+    }, 10);
+
+    setTimeout(() => {
+        toast.classList.remove("show");
+        setTimeout(() => {
+            toast.classList.add("oculto");
+        }, 300);
+    }, 3000);
+}
+
+/* VALIDACIÓN AL ENVIAR EL FORMULARIO*/
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    let valido = true;
+
+    if (!validarNombre()) valido = false;
+    if (!validarApellido()) valido = false;
+    if (!validarCorreo()) valido = false;
+    if (!validarServicio()) valido = false;
+    if (!validarMensaje()) valido = false;
+
+    if (!valido) return;
+    
+    console.log("Nombre:", nombre.value);
+    console.log("Apellido:", apellido.value);
+    console.log("Correo:", correo.value);
+    console.log("Servicio:", servicio.value);
+    console.log("Mensaje:", mensaje.value);
+    
+    btnEnviar.disabled = true;
+
+    mostrarToast();
+
+    form.reset();
+    btnEnviar.disabled = false;
+    validarFormulario();
+
+});

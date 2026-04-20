@@ -1,4 +1,4 @@
-
+/* MODO OSCURO */
 :root {
     --bg-body: linear-gradient(180deg, #052162 0%, #305582 100%);
     --bg-hamburguesa: #ffffff;
@@ -14,6 +14,7 @@
     --border-color: #334155;
     --bg-nav:#cbd5f5;
 }
+/* MODO CLARO */
 body.light {
     --bg-body: #f4f7fb;
     --bg-hamburguesa: #052162;
@@ -32,6 +33,7 @@ body.light {
 #modo {
     display: none;
 }
+
 label[for="modo"] {
     cursor: pointer;
     padding: 6px 12px;
@@ -50,10 +52,11 @@ body {
     color: var(--text-color);
 }
 
-
+/* HEADER */
 .logo {
     width: 130px;
 }
+
 header {
     width: 100%;
     display: flex;
@@ -86,7 +89,7 @@ header {
 }
 
 .nav-link:hover {
-    color: white;
+    color: var(--text-color);
 }
 
 /* SUBRAYADO ANIMADO */
@@ -166,6 +169,14 @@ nav a:hover::after,
 nav a.activo::after {
     width: 100%;
 }
+/* MAIN */
+main {
+    width: 70%;
+    background: var(--bg-main);
+
+    padding: 3%;
+    box-shadow: 0 10px 30px rgba(86, 77, 77, 0.1);
+}
 section {
     scroll-margin-top: 19px;
     padding: 7%;
@@ -200,6 +211,26 @@ p {
     text-align: center;
 }
 /* Contáctenos */
+#contacto {
+    margin-top: 60px;
+    display: flex;
+    gap: 10%;
+    justify-content: center; 
+}
+form {
+    
+    width: 100%;
+    display: grid;
+    justify-content: center; 
+    align-items: center;
+}
+a {
+    color: var(--text-color);
+}
+textarea {
+    min-height: 120px;
+    resize: none;
+}
 .error {
     color: #ef4444;
     font-size: 12px;
@@ -238,10 +269,6 @@ p {
     box-shadow: 0 0 0 2px rgba(59,130,246,0.2);
 }
 
-textarea {
-    min-height: 120px;
-    resize: none;
-}
 .formulario button {
     margin-top: 10px;
     padding: 10px;
@@ -253,41 +280,41 @@ textarea {
     cursor: pointer;
     transition: 0.3s;
 }
-
 .formulario button:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(37,99,235,0.3);
 }
+/* MENSAJE DE CONFIRMACIÓN DEL FORM */
+.toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 12px 18px;
+    border-radius: 8px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
 
-a {
-    color: #f5f9ff;
+.toast.show {
+    opacity: 1;
+    transform: translateY(0);
 }
-form {
-    
-    width: 100%;
-    display: grid;
-    justify-content: center; 
-    align-items: center;
-}
-main {
-    width: 70%;
-    background: var(--bg-main);
 
-    padding: 3%;
-    box-shadow: 0 10px 30px rgba(86, 77, 77, 0.1);
+.oculto {
+    display: none;
 }
-#contacto {
-    margin-top: 60px;
-    display: flex;
-    gap: 10%;
-    justify-content: center; 
-}
+
 footer {
     width: 70%;
     background-color: #305582;
     padding: 3%;
     text-align: center;
 }
+
+/* RESPONSIVO */
 @media (max-width: 1024px) {
     main {
         width: 90%;

@@ -123,40 +123,43 @@
             </div>
             <section id="contacto">
                 <div class="box-contacto">
-                <h2>Formulario de contacto</h2>
-                <form action="#" class="formulario">
-                    <div class="place-contacto">
-                        <label for="">Nombre: </label><br>
-                        <input type="text" id="fname" required><br>
-                        <small class="error" id="error-nombre"></small>
+                    <h2>Formulario de contacto</h2>
+                    <form action="#" class="formulario" id="formulario">
+                        <div class="place-contacto">
+                            <label for="">Nombre: </label><br>
+                            <input type="text" id="fname" required><br>
+                            <small class="error" id="error-nombre"></small>
+                        </div>
+                        <div class="place-contacto">
+                            <label for="">Apellido: </label><br>
+                            <input type="text" id="apellido" required><br>
+                            <small class="error" id="error-apellido"></small>
+                        </div>
+                        <div class="place-contacto">
+                            <label for="">Correo electrónico</label><br>
+                            <input type="email" id="correo" required><br>
+                            <small class="error" id="error-correo"></small>
+                        </div>
+                        <div class="place-contacto">
+                            <label for="">Servicio: </label><br>
+                            <select name="Servicios" id="servicio" required>
+                                <option value="consultoria_digital">Consultoría Digital</option>
+                                <option value="soluciones_multiexperiencia">Soluciones Multiexperiencia</option>
+                                <option value="evolucion_ecosistemas">Evolución de Ecosistemas</option>
+                                <option value="soluciones_lc">Soluciones Low-Code</option>
+                            </select>
+                            <small class="error" id="error-servicio"></small>
+                        </div>
+                        <div class="place-contacto">
+                            <label for="">Mensaje: </label><br>
+                            <textarea name="message" id="mensaje" required></textarea><br>
+                            <small class="error" id="error-mensaje"></small>
+                        </div>
+                        <input type="submit" value="Enviar" id="btnEnviar" disabled>
+                    </form>
+                    <div id="toast" class="toast oculto">
+                        ¡Formulario enviado con éxito!
                     </div>
-                    <div class="place-contacto">
-                        <label for="">Apellido: </label><br>
-                        <input type="text" id="apellido" required><br>
-                        <small class="error" id="error-apellido"></small>
-                    </div>
-                    <div class="place-contacto">
-                        <label for="">Correo electrónico</label><br>
-                        <input type="email" id="correo" required><br>
-                        <small class="error" id="error-correo"></small>
-                    </div>
-                    <div class="place-contacto">
-                        <label for="">Servicio: </label><br>
-                        <select name="Servicios" id="servicio" required>
-                            <option value="consultoria_digital">Consultoría Digital</option>
-                            <option value="soluciones_multiexperiencia">Soluciones Multiexperiencia</option>
-                            <option value="evolucion_ecosistemas">Evolución de Ecosistemas</option>
-                            <option value="soluciones_lc">Soluciones Low-Code</option>
-                        </select>
-                        <small class="error" id="error-servicio"></small>
-                    </div>
-                    <div class="place-contacto">
-                        <label for="">Mensaje: </label><br>
-                        <textarea name="message" id="mensaje" required></textarea><br>
-                        <small class="error" id="error-mensaje"></small>
-                    </div>
-                    <input type="submit" value="Enviar" id="btnEnviar" disabled>
-                </form>
                 </div>
                 <div class="box-contacto">
                     <h2>Contáctenos</h2>
