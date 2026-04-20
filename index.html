@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/script.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <img class="logo" src="img/TecnoDev.png" alt="TecnoDev">
+            <nav class="nav" id="nav">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#servicios" class="nav-link">Nuestros Servicios</a>
+                <a href="#contacto" class="nav-link">Contáctenos</a>
+                <a href="#nosotros" class="nav-link">Nosotros</a>
+            </nav>
+            <div class="hamburguesa" id="hamburguesa">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <input type="checkbox" id="modo">
+            <label for="modo" id="labelModo" class="toggle-text"></label>   
+        </header>
+        <main>
+            <section id="home">
+                <h1>Soluciones digitales que impulsan tu negocio</h1>
+                <p>
+                    Somos una empresa de consultoría y desarrollo de software especializada en crear 
+                    soluciones digitales integrales que se adaptan a las necesidades de cada cliente. 
+                    Nuestro enfoque combina innovación, tecnología y estrategia para ayudarte a optimizar 
+                    procesos, mejorar la eficiencia y alcanzar tus objetivos.
+                </p>
+
+                <p>
+                    Acompañamos a empresas en todo su proceso de transformación digital, desde la 
+                    planificación y el diseño hasta la implementación y el soporte continuo. 
+                    Desarrollamos sistemas a medida, aplicaciones web y soluciones tecnológicas 
+                    que generan valor real.
+                </p>
+
+                <p>
+                    Confía en nosotros para llevar tus ideas al siguiente nivel con tecnología 
+                    confiable, escalable y orientada a resultados.
+                </p>
+                <div class="place-logo">
+                    <video width="640" height="360" controls>
+                        <source src="img/TecnoDev.mp4" type="video/mp4">
+                        Tu navegador no soporta la reproducción de video.
+                    </video>
+                </div>
+            </section>
+            <section id="servicios">
+                <h2>Nuestros servicios</h2>
+                <article>
+                    <h3>Consultoría Digital</h3>
+                    <p>
+                        Analizamos los procesos y necesidades de tu empresa para diseñar estrategias 
+                        tecnológicas efectivas que impulsen tu transformación digital.
+                    </p>
+                    <p>
+                        <strong>Beneficios:</strong>
+                    </p>
+                    <ul>
+                        <li>Toma de decisiones informadas</li>
+                        <li>Optimización de recursos</li>
+                        <li>Mejora en la competitividad del negocio</li>
+                    </ul>
+                </article>
+
+                <article>
+                    <h3>Soluciones Multiexperiencia</h3>
+                    <p>
+                        Desarrollamos aplicaciones y plataformas que ofrecen una experiencia integrada 
+                        y consistente a través de múltiples dispositivos y canales digitales.
+                    </p>
+                    <p>
+                        <strong>Beneficios:</strong>
+                    </p>
+                    <ul>
+                        <li>mayor satisfacción del usuario</li>
+                        <li>mejor interacción con clientes</li>
+                        <li>aumento en la fidelización</li>
+                    </ul>
+                </article>
+
+                <article>
+                    <h3>Evolución de Ecosistemas</h3>
+                    <p>
+                        Modernizamos y conectamos sistemas existentes para mejorar su rendimiento, 
+                        escalabilidad e integración dentro del entorno digital de la empresa.
+                    </p>
+                    <p>
+                        <strong>Beneficios:</strong>
+                    </p>
+                    <ul>
+                        <li>Mayor eficiencia operativa</li>
+                        <li>Reducción de costos</li>
+                        <li>Adaptación a nuevas tecnologías</li>
+                    </ul>
+                </article>
+
+                <article>
+                    <h3>Soluciones Low-Code</h3>
+                    <p>
+                        Implementamos plataformas de desarrollo low-code que permiten crear aplicaciones 
+                        de forma rápida y con menor complejidad técnica.
+                    </p>
+                    <p>
+                        <strong>Beneficios:</strong>
+                    </p>
+                    <ul>
+                        <li>Desarrollo más ágil</li>
+                        <li>Reducción de tiempos de entrega</li>
+                        <li>Facilidad de mantenimiento</li>
+                    </ul>
+                </article>
+            </section>
+            <div class="cuadro-grande">
+                <img class="banner" src="img/banner1.png" alt="">
+            </div>
+            <section id="contacto">
+                <div class="box-contacto">
+                <h2>Formulario de contacto</h2>
+                <form action="#" class="formulario">
+                    <div class="place-contacto">
+                        <label for="">Nombre: </label><br>
+                        <input type="text" id="fname" required><br>
+                        <small class="error" id="error-nombre"></small>
+                    </div>
+                    <div class="place-contacto">
+                        <label for="">Apellido: </label><br>
+                        <input type="text" id="apellido" required><br>
+                        <small class="error" id="error-apellido"></small>
+                    </div>
+                    <div class="place-contacto">
+                        <label for="">Correo electrónico</label><br>
+                        <input type="email" id="correo" required><br>
+                        <small class="error" id="error-correo"></small>
+                    </div>
+                    <div class="place-contacto">
+                        <label for="">Servicio: </label><br>
+                        <select name="Servicios" id="servicio" required>
+                            <option value="consultoria_digital">Consultoría Digital</option>
+                            <option value="soluciones_multiexperiencia">Soluciones Multiexperiencia</option>
+                            <option value="evolucion_ecosistemas">Evolución de Ecosistemas</option>
+                            <option value="soluciones_lc">Soluciones Low-Code</option>
+                        </select>
+                        <small class="error" id="error-servicio"></small>
+                    </div>
+                    <div class="place-contacto">
+                        <label for="">Mensaje: </label><br>
+                        <textarea name="message" id="mensaje" required></textarea><br>
+                        <small class="error" id="error-mensaje"></small>
+                    </div>
+                    <input type="submit" value="Enviar" id="btnEnviar" disabled>
+                </form>
+                </div>
+                <div class="box-contacto">
+                    <h2>Contáctenos</h2>
+                    <address>
+                        Dirección física:<br>
+                        Av. Providencia 1234, Oficina 601<br>
+                        Providencia, Santiago<br>
+                        Chile <br>
+                        Contacto telefónico:<br>
+                        Teléfono: +56 2 1234 5678<br>
+                        Dominio de la página web:<br>
+                        <a href="https://www.coningenio.cl/">www.coningenio.cl</a><br>
+                        Correo electrónico:<br>
+                        <a href="mailto:info@coningenio.cl">info@coningenio.cl</a><br>
+                    </address>
+                </div>
+            </section>
+            <section id="nosotros">
+                <h2>Nosotros</h2>
+                <article>
+                    <h3>Misión</h3>
+                    <p>
+                        Brindar soluciones digitales innovadoras mediante servicios de consultoría y 
+                        desarrollo de software, ayudando a las organizaciones a optimizar sus procesos, 
+                        mejorar su competitividad y adaptarse a los desafíos tecnológicos actuales.
+                    </p>
+                </article>
+
+                <article>
+                    <h3>Visión</h3>
+                    <p>
+                        Ser una empresa referente en consultoría y desarrollo de software a nivel nacional, 
+                        reconocida por la calidad de sus soluciones, su capacidad de innovación y el valor 
+                        que genera en sus clientes.
+                    </p>
+                </article>
+
+                <article>
+                    <h3>Valores</h3>
+                    <ul>
+                        <li><strong>Innovación:</strong> buscamos constantemente nuevas formas de resolver problemas.</li>
+                        <li><strong>Compromiso:</strong> trabajamos enfocados en cumplir y superar las expectativas de nuestros clientes.</li>
+                        <li><strong>Calidad:</strong> entregamos soluciones confiables, eficientes y bien diseñadas.</li>
+                        <li><strong>Trabajo en equipo:</strong> fomentamos la colaboración para lograr mejores resultados.</li>
+                        <li><strong>Responsabilidad:</strong> actuamos con ética y profesionalismo en cada proyecto.</li>
+                    </ul>
+                </article>
+            </section>
+        </main>
+        <footer>&copy;2026 | Todos los derechos reservados</footer>
+    </body>
+</html>
