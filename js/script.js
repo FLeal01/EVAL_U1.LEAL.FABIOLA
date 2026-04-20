@@ -181,6 +181,11 @@ function mostrarToast() {
 
     toast.classList.remove("oculto");
     
+    var name = document.getElementById("nombreUsuario").value;
+    var name = nombre.value;
+
+    document.getElementById("nombreUsuario").innerText = name;
+
     setTimeout(() => {
         toast.classList.add("show");
     }, 10);
@@ -217,8 +222,8 @@ form.addEventListener("submit", (e) => {
     btnEnviar.disabled = true;
 
     mostrarToast();
-
     form.reset();
+
     btnEnviar.disabled = false;
     validarFormulario();
 
